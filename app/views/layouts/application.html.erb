@@ -13,14 +13,9 @@
     <div>
       <% if user_signed_in? %>
           <div>
-            <span><%= current_user.nickname %>
-              <ul>
-                <li>
-                  <%= link_to "マイページ", root_path %>
-                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                </li>
-              </ul>
-            </span>
+            <%= current_user.nickname %>
+            <%= link_to "マイページ", root_path %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           </div>
         <% else %>
           <div>
