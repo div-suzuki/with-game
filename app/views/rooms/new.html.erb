@@ -2,10 +2,20 @@
   <div class="container">
     <h3>新規募集ルーム作成</h3>
   <%= form_with(model: @room, local: true) do |form| %>      
-    <%= render 'layouts/error_messages', model: form.object %>  
-    <%= form.text_field :tag_id, placeholder: "タグ付け" %>
-    <%= form.text_field :member, placeholder: "募集人数" %>
-    <%= form.text_area :text, placeholder: "備考" %>
+    <%= render 'layouts/error_messages', model: form.object %> 
+    <div>
+      募集人数
+    </div> 
+    <%= form.collection_select(:member_id, Member.all, :id, :name, {}, {class:"select-box"}) %>
+    <div>
+      タグ付け
+    </div> 
+    <%= form.text_field :tag_id %>
+    <div>
+      備考欄
+    </div> 
+    <%= form.text_area :text %>
+
     <%= form.submit "募集" %>
   <% end %>
   </div>
