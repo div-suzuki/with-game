@@ -1021,6 +1021,13 @@ form input[type="submit"]:hover {
   color: #666;
 }
 
+.select-box {
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color:white;
+  box-sizing: border-box;
+}
+
 .comments {
   padding: 5px;
   margin-top: 15px;
