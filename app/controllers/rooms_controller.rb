@@ -2,8 +2,6 @@ class RoomsController < ApplicationController
   def index
     @rooms = Room.includes(:user).order("created_at DESC")
   end
-<<<<<<< Updated upstream
-=======
 
   def new
     @room = Room.new
@@ -22,5 +20,4 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:tag_id, :member_id, :text)
   end
->>>>>>> Stashed changes
 end
