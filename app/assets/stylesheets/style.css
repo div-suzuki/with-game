@@ -738,7 +738,7 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 header.header {
   padding: 10px;
   border-bottom: 1px solid #D8D8D8;
-  background-color:black;
+  background-color: black;
   position: fixed;
   top: 0;
   left: 0;
@@ -988,7 +988,7 @@ form textarea {
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
-  border: 1px solid #D8D8D8;
+  border: 5px solid #000000;
   border-radius: 5px;
   font-family: "游ゴシック", "YuGothic";
 }
@@ -1006,11 +1006,8 @@ form input[type="submit"]:hover {
 }
 
 .container {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color:white;
-  box-sizing: border-box;
+  padding-bottom: 20px;
+  width: 460px;
 }
 
 .container h3 {
@@ -1023,6 +1020,7 @@ form input[type="submit"]:hover {
 
 .select-box {
   margin: 20px 0;
+  border: 5px solid #000000;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
   background-color:white;
   box-sizing: border-box;
@@ -1063,4 +1061,64 @@ footer p {
 
 .search-form .search-btn {
   width: 10%;
+}
+
+.msr_list06{
+  margin:0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.msr_list06 li{
+  width:33.3%;
+  padding:0 10px;
+  margin: 10px;
+  display:inline-block;
+  float:left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.msr_list06 li a{
+  width:100%;
+  padding:18px 0;
+  color:black;
+  font-size:16px;
+  background:white;
+  border:2px solid black;
+  text-decoration:none;
+  text-align:center;
+  display:block;
+  position:relative;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.msr_list06 li a::after{
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-bottom: solid 2px #fff;
+  border-right: solid 2px #fff;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  margin-left: -3px;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.msr_list06 li a:hover{
+  background:#fff;
+  color:#1B73BA;
+}
+.msr_list06 li a:hover::after{
+  border-bottom: solid 2px #1B73BA;
+  border-right: solid 2px #1B73BA;
 }

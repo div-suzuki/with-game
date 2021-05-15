@@ -1,5 +1,7 @@
-<div class="contents row">
+<h1>募集タイトル一覧</h1>
+
+<ul class="msr_list06 clearfix">
   <% @rooms.each do |room| %>
     <%= render partial: "room", locals: { room: room } %>
   <% end %>
-</div>
+</ul>
