@@ -1,0 +1,27 @@
+<div class="contents row">
+  <div class="container">
+    <h3>詳細情報</h3>
+    <div class="msr_h205" >
+      作品名
+    </div>
+      <%= @room.title %>
+    <div class="msr_h205" >
+      PSID
+    </div>
+      <%= @room.psid %>
+    <div class="msr_h205" >
+      募集人数
+    </div> 
+      <%= @room.member.name %>
+    <div class="msr_h205" >
+      タグ
+    </div> 
+      <% @tags.each do |tag| %>
+        <%=  "#{tag.name}(#{tag.taggings_count})" %>
+      <% end %>
+    <div class="msr_h205" >
+      備考欄
+    </div> 
+      <%= @room.text %>
+  </div>
+</div>
