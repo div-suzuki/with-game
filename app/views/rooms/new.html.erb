@@ -4,13 +4,21 @@
   <%= form_with(model: @room, local: true) do |form| %>      
     <%= render 'layouts/error_messages', model: form.object %> 
     <div>
+      作品名
+    </div>
+    <%= form.text_field :title %>
+     <div>
+      PSID
+    </div>
+    <%= form.text_field :psid %>
+    <div>
       募集人数
     </div> 
     <%= form.collection_select(:member_id, Member.all, :id, :name, {}, {class:"select-box"}) %>
     <div>
-      タグ付け
+      タグ
     </div> 
-    <%= form.text_field :tag_id %>
+    <%= form.text_field :tag_list, value: @room.tag_list.join(',') %>
     <div>
       備考欄
     </div> 
