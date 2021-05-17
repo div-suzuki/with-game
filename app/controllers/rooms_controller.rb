@@ -16,9 +16,14 @@ class RoomsController < ApplicationController
     end
   end
 
+  def show
+    @room = Room.find(params[:id])
+    @tags = @room.tag_counts_on(:tags)
+  end
+
   private
   def room_params
-    params.require(:room).permit(:tag_id, :member_id, :text).merge(user_id: current_user.id)
+    params.require(:room).permit(:title, :psid, :tag_list, :member_id, :text).merge(user_id: current_user.id)
   end
 
 end

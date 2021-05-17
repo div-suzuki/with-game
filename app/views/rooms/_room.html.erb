@@ -1,4 +1,3 @@
- <li>
- <%= link_to "#{room.text}（募集の投稿数）", root_path %>
- </li>
-
+<div class="msr_list07" >
+  <%= link_to "[#{room.title}]  #{room.user.nickname}さんの募集  ~残り#{room.member.name}~", room_path(room.id) %>
+</div>
