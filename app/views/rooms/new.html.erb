@@ -18,7 +18,7 @@
     <div>
       タグ
     </div> 
-    <%= form.text_field :tag_list, value: @room.tag_list.join(',') %>
+    <%= form.text_field :tag_list, value: @room.tag_list.join(','),placeholder: "タグを複数つけるには' , 'で区切ってください" %>
     <div>
       備考欄
     </div> 

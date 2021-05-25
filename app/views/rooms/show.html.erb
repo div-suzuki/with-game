@@ -16,9 +16,11 @@
     <div class="msr_h205" >
       タグ
     </div> 
+    <p class="msr_btn07">
       <% @tags.each do |tag| %>
-        <%=  "#{tag.name}(#{tag.taggings_count})" %>
+        <%= link_to "#{tag.name}(#{tag.taggings_count})", root_path(tag: tag.name) %>
       <% end %>
+    </p>
     <div class="msr_h205" >
       備考欄
     </div> 

@@ -1,6 +1,9 @@
 class RoomsController < ApplicationController
   def index
     @rooms = Room.includes(:user).order("created_at DESC")
+    if @tag = params[:tag]   # タグ検索用
+      @room = Room.tagged_with(params[:tag])   # タグに紐付く投稿
+    end
   end
 
   def new

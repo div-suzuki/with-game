@@ -60,4 +60,3 @@ gem 'active_hash'
 gem 'acts-as-taggable-on'
 
 gem 'bootstrap', '~> 4.4.1'
-gem 'jquery-rails'

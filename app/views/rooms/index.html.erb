@@ -1,8 +1,18 @@
 <div class="container">
 <h3>募集タイトル一覧</h3>
 </div>
-<div class="msr_list06 clearfix" >
-  <% @rooms.each do |room| %>
-    <%= render partial: "room", locals: { room: room } %>
-  <% end %>
-</div>
+
+<% if @room.present? %> 
+  <%= "：#{@tag} に関連する投稿" %>
+  <div class="msr_list06 clearfix" >
+    <%@room.each do |room|%>
+      <%= render partial: "room", locals: { room: room } %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="msr_list06 clearfix" >
+    <% @rooms.each do |room| %>
+      <%= render partial: "room", locals: { room: room } %>
+    <% end %>
+  </div>
+<% end %>
