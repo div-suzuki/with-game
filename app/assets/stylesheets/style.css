@@ -1008,6 +1008,8 @@ form input[type="submit"]:hover {
 .container {
   padding-bottom: 20px;
   width: 460px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container h3 {
@@ -1049,12 +1051,14 @@ form input[type="submit"]:hover {
 }
 
 footer {
+  
   margin: 30px auto;
   padding: 10px;
   color: #D8D8D8;
 }
 
 footer p {
+  
   text-align: center;
 }
 
@@ -1175,3 +1179,128 @@ footer p {
   width: 4px;
   vertical-align:0px;
 }
+
+.msr_btn08{
+  display: flex;
+}
+
+.msr_btn08 a {
+  margin-left: auto;
+  margin-right: 15px;
+  background-color: white;
+  border: 5px solid #000000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #000000;
+  display: block;
+  font-size: 13px;
+  padding: 20px 20px 20px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  width: 250px;
+}
+/* 黒の三角形 */
+.msr_btn08 a:before {
+  border: 6px solid transparent;
+  border-left: 6px solid #000000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  left: 15px;
+  margin:-6px 0 0;
+  position: absolute;
+  top: 50%;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  vertical-align: middle;
+  width: 6px;
+}
+/* マウスオーバー */
+.msr_btn08 a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.msr_btn08 a:hover:before {
+  border-left: 6px solid #FFFFFF;
+}
+
+.messages {
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message {
+  margin: 10px 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.comment-form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;  
+  display: flex;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  width: 100%;
+}
+
+.form-input {
+  background-color: white;
+  width: 100%;
+  display: flex;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #000000;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+  width: 10%;
+}
+

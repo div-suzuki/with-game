@@ -22,6 +22,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @tags = @room.tag_counts_on(:tags)
+    @comments = @room.comments.includes(:user)
   end
 
   private

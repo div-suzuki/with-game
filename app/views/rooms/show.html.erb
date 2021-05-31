@@ -27,3 +27,24 @@
       <%= @room.text %>
   </div>
 </div>
+
+<div class="container">
+  <div class="comments">
+    <% if @comments.present? %>
+      <h4>コメント</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, root_path %>：</strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="msr_btn08">
+  <% if current_user %>
+    <%= link_to "コメントする", room_comments_path(@room.id) %>
+    <%= link_to "参加申請する", root_path %>
+  <% end %>
+  </div>
+</div>
